@@ -5,20 +5,88 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
-		<link rel="stylesheet" href="./style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous"
+		/>
 		<title>Practice POO JavaScript</title>
 	</head>
 	<body>
-		<div class="container">
-			<form action="#">
-				<label for="nombre">Escribe tu nombre</label>
-				<input type="text" id="nombre" />
-				<label for="número">Escribe tu número</label>
-				<input type="number" id="número" />
-				<button type="submit" class="button">Enviar</button>
-			</form>
-			<div class="container__text"></div>
+		<div
+			class="
+				container-fluid
+				col-12
+				navbar-light
+				bg-light bg-opacity-70
+				border
+				mb-5
+			"
+		>
+			<h1 class="fs-2 text-center p-3">Names and prices</h1>
 		</div>
-		<script src="./script.js"></script>
+		<div
+			class="
+				container-fluid
+				col-12 col-md-11
+				m-auto
+				d-md-flex
+				mt-5
+				justify-content-around
+			"
+		>
+			<div class="card col-12 col-sm-8 m-sm-auto m-md-0 col-md-4 col-lg-3">
+				<h2 class="fs-3 card-title bg-light border-bottom text-center p-2">
+					Add A Product
+				</h2>
+				<div class="card-body">
+					<form action="#" class="needs-validation">
+						<input
+							type="text"
+							name="product"
+							id="product"
+							class="d-block form-control mb-3 validationCustom01"
+							placeholder="Product Name"
+						/>
+						<input
+							type="number"
+							name="price"
+							id="price"
+							class="d-block form-control mb-3 validationCustom01"
+							placeholder="Product Price"
+						/>
+						<input
+							type="submit"
+							value="Enviar"
+							class="btn btn-primary w-100 rounded-pill"
+						/>
+					</form>
+					<!-- .card-body -->
+				</div>
+				<!-- .card -->
+			</div>
+
+			<!-- Table Of Content -->
+			<div
+				class="
+					col-12 col-sm-8
+					my-3 my-sm-3
+					m-sm-auto m-md-0
+					col-md-7 col-lg-8
+					bg-success
+				"
+			>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore,
+				cumque voluptates facilis id veritatis rem obcaecati officiis
+				perspiciatis labore, odio excepturi ut reiciendis hic dolor qui!
+				Nesciunt non atque ratione.
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+			integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
