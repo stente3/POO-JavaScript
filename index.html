@@ -41,26 +41,45 @@
 					Add A Product
 				</h2>
 				<div class="card-body">
-					<form action="#" class="needs-validation">
-						<input
-							type="text"
-							name="product"
-							id="product"
-							class="d-block form-control mb-3 validationCustom01"
-							placeholder="Product Name"
-						/>
-						<input
-							type="number"
-							name="price"
-							id="price"
-							class="d-block form-control mb-3 validationCustom01"
-							placeholder="Product Price"
-						/>
-						<input
+					<form action="#" class="needs-validation" novalidate>
+						<div class="container-input">
+							<input
+								type="text"
+								name="product"
+								id="product"
+								class="d-block form-control"
+								placeholder="Product Name"
+								required
+								autocomplete="off"
+							/>
+							<div class="valid-feedback">¡Perfect!</div>
+							<div class="invalid-feedback">
+								You must say what the name of the product is
+							</div>
+						</div>
+						<div class="container-input">
+							<input
+								type="number"
+								name="price"
+								id="price"
+								class="d-block form-control mt-3"
+								placeholder="Product Price"
+								step="any"
+								;
+								required
+								autocomplete="off"
+							/>
+							<div class="valid-feedback">¡Perfect!</div>
+							<div class="invalid-feedback">
+								You must say what the price of the product is
+							</div>
+						</div>
+						<button
 							type="submit"
-							value="Enviar"
-							class="btn btn-primary w-100 rounded-pill"
-						/>
+							class="btn btn-primary w-100 mt-3 rounded-pill"
+						>
+							Enviar
+						</button>
 					</form>
 					<!-- .card-body -->
 				</div>
@@ -88,5 +107,6 @@
 			integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
 			crossorigin="anonymous"
 		></script>
+		<script src="./script.js"></script>
 	</body>
 </html>
