@@ -7,6 +7,10 @@ class TextBlock {
 // Reset form validation
 function wasValidate() {
 	document.querySelector(".needs-validation").classList.remove("was-validated");
+	let reset = document.querySelectorAll(".needs-validation .form-control");
+	reset.forEach((e) => {
+		e.value = "";
+	});
 }
 // Add table of content with new
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -29,9 +33,9 @@ function wasValidate() {
 					event.preventDefault();
 					const productName = document.querySelector("#product").value;
 					const productPrice = document.querySelector("#price").value;
-					wasValidate();
 					const productDescription =
 						document.querySelector("#description").value;
+					wasValidate();
 					const tableOfContent = document.querySelector(".table-of-content");
 					let content = document.createElement("div");
 					content.classList.add("mw-100");
@@ -41,15 +45,23 @@ function wasValidate() {
 							<strong>Product Name = </strong> ${productName}
 						</p>
 						<p class="product-price col-6">
-							<strong>Product Price = </strong> ${productPrice}
+							<strong>Product Price = </strong> $ ${productPrice}
 						</p>
 						<p class="product-description mw-50 col-12 text-start">
 							${productDescription}
 						</p>
 					</div>
-					<input type="button" value="Eliminar" class="bg-danger btn" />
 				</div>`;
+					let btnRemove = document.createElement("input");
+					btnRemove.type = "button";
+					btnRemove.value = "Eliminar";
+					btnRemove.classList.add("bg-danger", "btn");
+					btnRemove.onclick = (e) => {
+						btnRemove.parentElement.parentElement.remove();
+					};
+					//<input type="button" value="Eliminar" class="bg-danger btn" />
 					tableOfContent.appendChild(content);
+					content.firstChild.appendChild(btnRemove);
 					wasValidate();
 				}
 			},
